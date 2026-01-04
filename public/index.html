@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Secret Coordinates Vault</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Secret Coordinates Vault</h1>
+    <p>Write an anonymous message — retrieve it only if you know the coordinates.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>Save a New Message</h2>
+      <label>Message</label>
+      <textarea id="msg" placeholder="Type your message here..."></textarea>
+      <button onclick="saveMessage()">Save Message</button>
+      <div id="coordsBox" class="output" style="display:none"></div>
+    </div>
+
+    <div class="card">
+      <h2>Find a Message</h2>
+      <label>X Coordinate</label>
+      <input id="x" placeholder="Enter X value" />
+
+      <label style="margin-top:10px;">Y Coordinate</label>
+      <input id="y" placeholder="Enter Y value" />
+
+      <button class="secondary" onclick="findMessage()">Search Message</button>
+      <div id="resultBox" class="output" style="display:none"></div>
+    </div>
+
+  </div>
+
+  <div class="footer-note">
+    Anonymous • Minimal • Secure Lookup via Coordinates
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
